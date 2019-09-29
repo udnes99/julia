@@ -1,5 +1,6 @@
 #MergeSort for nx2 matrix with option to sort on first or second column.
-function MergeArrays(x,y,coordinate)
+
+function MergeArrays(x,y,coordinate) #In: x - left half, y - right half
 	rows = size(x,1) + size(y, 1) #n
 	Sorted = zeros(Int, rows, 2) #nx2 matrix
 	sentinel = [Inf Inf]
@@ -22,7 +23,7 @@ function MergeArrays(x,y,coordinate)
 	return Sorted
 end
 
-function MergeSort(x, coordinate)
+function MergeSort(x, coordinate) #In: x - nx2 matrix, coordinate: column to sort by | Out: x sorted
 	rows = size(x, 1)
 	if rows > 1
 		q = floor(Int, rows/2)
